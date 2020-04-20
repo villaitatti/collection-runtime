@@ -1,0 +1,35 @@
+
+<http://www.researchspace.org/instances/fields/Bibliography_Short_TitleHertz/context> {
+  <http://www.researchspace.org/instances/fields/Bibliography_Short_TitleHertz> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-5c7d22f52e684e28b626b613bc24e9a9-9cockn a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Bibliography_Short_TitleHertz> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Bibliography Short Title"@en;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-5c7d22f52e684e28b626b613bc24e9a9-9cockn <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P70i_is_documented_in ?document.
+      ?document crm:P1_is_identified_by ?value .
+}""" .
+  
+  _:genid-5c7d22f52e684e28b626b613bc24e9a9-hhcyu <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Bibliography_Short_TitleHertz> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-5c7d22f52e684e28b626b613bc24e9a9-hhcyu;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/artwork_hertz>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-5c7d22f52e684e28b626b613bc24e9a9-9cockn .
+  
+  _:genid-5c7d22f52e684e28b626b613bc24e9a9-hhcyu a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Bibliography_Short_TitleHertz> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-09-25T07:51:42.937Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Bibliography_Short_TitleHertz> .
+  
+  <http://www.researchspace.org/instances/fields/Bibliography_Short_TitleHertz> a <http://www.w3.org/ns/ldp#Resource> .
+}

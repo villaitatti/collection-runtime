@@ -1,0 +1,37 @@
+
+<http://www.researchspace.org/instances/fields/DimensionFrick/context> {
+  <http://www.researchspace.org/instances/fields/DimensionFrick> <http://www.metaphacts.com/ontology/fields#range>
+      <http://www.cidoc-crm.org/cidoc-crm/E53_Dimension>;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-3cf466d15c314e45a51e04d4702a0092-5mpdf a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/DimensionFrick> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/artwork_frick>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-3cf466d15c314e45a51e04d4702a0092-rp5kw;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-3cf466d15c314e45a51e04d4702a0092-5mpdf <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-3cf466d15c314e45a51e04d4702a0092-rp5kw <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P43_has_dimension ?doc .
+
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/DimensionFrick> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Dimension"@en .
+  
+  _:genid-3cf466d15c314e45a51e04d4702a0092-rp5kw a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/DimensionFrick> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-3cf466d15c314e45a51e04d4702a0092-5mpdf;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-10-31T16:22:01.822Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/DimensionFrick> .
+  
+  <http://www.researchspace.org/instances/fields/DimensionFrick> a <http://www.w3.org/ns/ldp#Resource> .
+}

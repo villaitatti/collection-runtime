@@ -1,0 +1,37 @@
+
+<http://www.researchspace.org/instances/fields/PlaceHertz/context> {
+  <http://www.researchspace.org/instances/fields/PlaceHertz> <http://www.metaphacts.com/ontology/fields#range>
+      <http://www.cidoc-crm.org/cidoc-crm/E53_Place>;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-1354f43e24074d80873af59cb2b56a36-rf7pwj a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/PlaceHertz> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-1354f43e24074d80873af59cb2b56a36-tx396u <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P53_has_former_or_current_location ?value.
+  ?value rdfs:label ?label.
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/PlaceHertz> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-1354f43e24074d80873af59cb2b56a36-tx396u;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/artwork_hertz>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Place"@en .
+  
+  _:genid-1354f43e24074d80873af59cb2b56a36-rf7pwj <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-1354f43e24074d80873af59cb2b56a36-tx396u a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/PlaceHertz> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-1354f43e24074d80873af59cb2b56a36-rf7pwj;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-09-24T16:17:03.507Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/PlaceHertz> .
+  
+  <http://www.researchspace.org/instances/fields/PlaceHertz> a <http://www.w3.org/ns/ldp#Resource> .
+}

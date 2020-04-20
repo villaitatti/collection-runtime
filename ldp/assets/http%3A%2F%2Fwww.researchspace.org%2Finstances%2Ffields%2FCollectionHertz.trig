@@ -1,0 +1,39 @@
+
+<http://www.researchspace.org/instances/fields/CollectionHertz/context> {
+  <http://www.researchspace.org/instances/fields/CollectionHertz> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Collection"@en;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-cca6c6540e444fb09e7ca4793938806b-e6xh14 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-cca6c6540e444fb09e7ca4793938806b-nx7q4r a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/CollectionHertz> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://collection.itatti.harvard.edu/category/artwork_marburg> .
+  
+  _:genid-cca6c6540e444fb09e7ca4793938806b-e6xh14 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P51_has_former_or_current_owner ?value.
+           ?value crm:P2_has_type ?type2 .
+      ?type2 rdfs:label \"Institute\" .
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/CollectionHertz> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/artwork_hertz> .
+  
+  _:genid-cca6c6540e444fb09e7ca4793938806b-nx7q4r <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/CollectionHertz> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-cca6c6540e444fb09e7ca4793938806b-e6xh14;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-cca6c6540e444fb09e7ca4793938806b-nx7q4r;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-14T08:50:08.148Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/CollectionHertz> .
+  
+  <http://www.researchspace.org/instances/fields/CollectionHertz> a <http://www.w3.org/ns/ldp#Resource> .
+}

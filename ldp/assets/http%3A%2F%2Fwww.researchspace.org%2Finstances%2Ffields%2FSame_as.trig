@@ -1,0 +1,28 @@
+
+<http://www.researchspace.org/instances/fields/Same_as/context> {
+  <http://www.researchspace.org/instances/fields/Same_as> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-31c529f7aba84835aa21eee524d32732-xeg2jm;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
+  
+  _:genid-31c529f7aba84835aa21eee524d32732-xeg2jm a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Same_as> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-31c529f7aba84835aa21eee524d32732-ejcooh;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Same As"@en .
+  
+  _:genid-31c529f7aba84835aa21eee524d32732-ejcooh <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject <http://www.w3.org/2002/07/owl#sameAs> ?value.
+}""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-31c529f7aba84835aa21eee524d32732-xeg2jm <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Same_as> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-09-16T09:42:48.242Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Same_as> .
+  
+  <http://www.researchspace.org/instances/fields/Same_as> a <http://www.w3.org/ns/ldp#Resource> .
+}

@@ -1,0 +1,43 @@
+
+<http://www.researchspace.org/instances/fields/Attribution_DescriptionMar/context> {
+  <http://www.researchspace.org/instances/fields/Attribution_DescriptionMar> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-e6b72daf7302450d879e7112e4a98c44-jopcb .
+  
+  _:genid-e6b72daf7302450d879e7112e4a98c44-jopcb <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  
+  ?subject crm:P108i_was_produced_by ?production.
+      ?production crm:P140i_was_attributed_by ?attr .
+      $attr crm:P67i_is_referred_to_by ?io.
+  ?io crm:P2_has_type ?type .
+  ?type rdfs:label \"Attribution Description\" .
+  ?io crm:P3_has_note ?value
+
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/Attribution_DescriptionMar> <http://www.metaphacts.com/ontology/fields#category>
+      <https://collection.itatti.harvard.edu/category/artwork_marburg> .
+  
+  _:genid-e6b72daf7302450d879e7112e4a98c44-dulknm <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Attribution_DescriptionMar> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-e6b72daf7302450d879e7112e4a98c44-dulknm .
+  
+  _:genid-e6b72daf7302450d879e7112e4a98c44-jopcb a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Attribution_DescriptionMar> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-e6b72daf7302450d879e7112e4a98c44-dulknm a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Attribution_DescriptionMar> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Attribution Reason"@en;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-14T09:04:07.745Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Attribution_DescriptionMar> .
+  
+  <http://www.researchspace.org/instances/fields/Attribution_DescriptionMar> a <http://www.w3.org/ns/ldp#Resource> .
+}

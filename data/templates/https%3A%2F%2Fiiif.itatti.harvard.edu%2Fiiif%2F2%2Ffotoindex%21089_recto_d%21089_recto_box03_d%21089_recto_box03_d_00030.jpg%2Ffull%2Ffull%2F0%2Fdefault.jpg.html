@@ -1,0 +1,22 @@
+<semantic-carousel 
+  query="
+
+        SELECT DISTINCT ?subject ?thumbnail ?label WHERE {                    
+          ?similarity sim:element  ?subject .
+          ?similarity sim:element ?thumbnail .
+          ?similarity sim:method ?similarityAssociation .
+ 				  ?similarityAssociation sim:weight ?label ;
+         a <https://vision.artresearch.net/resource/visualSimilarity/association/service/pastec>
+         
+        } LIMIT 50"
+  tuple-template='
+    <div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:300px;width: 100%;">
+      <div class="panel-body" style="height: 280px;">
+        <img src="{{thumbnail.value}}" style="max-height:260px; margin: 0 auto;" class="img-rounded">
+      </div>
+      <div class="panel-footer" style="position: relative;  border: none;">
+        <semantic-link title="{{label.value}}" class="grid-resource-link" uri="{{subject.value}}">{{label.value}}</semantic>
+      </div>
+    </div>
+  '
+></semantic-carousel>

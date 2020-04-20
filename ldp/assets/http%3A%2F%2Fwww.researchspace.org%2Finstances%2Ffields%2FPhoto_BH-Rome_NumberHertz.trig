@@ -1,0 +1,38 @@
+
+<http://www.researchspace.org/instances/fields/Photo_BH-Rome_NumberHertz/context> {
+  <http://www.researchspace.org/instances/fields/Photo_BH-Rome_NumberHertz> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-447a5c1c5bd54ca0bc75d16285fe4c8d-pt91q2;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Photo BH-Rome Number"@en;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-447a5c1c5bd54ca0bc75d16285fe4c8d-pq0i6r;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-447a5c1c5bd54ca0bc75d16285fe4c8d-pt91q2 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-447a5c1c5bd54ca0bc75d16285fe4c8d-pq0i6r a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Photo_BH-Rome_NumberHertz> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/photo_hertz> .
+  
+  _:genid-447a5c1c5bd54ca0bc75d16285fe4c8d-pt91q2 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-447a5c1c5bd54ca0bc75d16285fe4c8d-pq0i6r <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+
+      ?vi crm:P65i_is_shown_by ?card .
+      ?card   crm:P2_has_type ?type .
+      ?type rdfs:label \"Photo Card\" .
+      ?vi crm:P65i_is_shown_by ?subject.
+      ?subject  crm:P2_has_type ?type2 .
+      ?type2 rdfs:label \"Print\" .
+      ?card  crm:P1_is_identified_by ?value .
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/Photo_BH-Rome_NumberHertz> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-09-25T13:41:55.298Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Photo_BH-Rome_NumberHertz> .
+  
+  <http://www.researchspace.org/instances/fields/Photo_BH-Rome_NumberHertz> a <http://www.w3.org/ns/ldp#Resource> .
+}

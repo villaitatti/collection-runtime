@@ -1,0 +1,39 @@
+<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:20px;width: 33%;display:inline;">
+<h4 align="center"><b>Photographs</b></h4>
+</div>
+
+ <semantic-table 
+                query='PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+
+											 SELECT  distinct $subject ?artwork ?keeper ?photographer ?date
+											 WHERE {
+     	                 
+                          ?artwork crm:P138i_is_represented_by ?vi.
+      										?vi crm:P65i_is_shown_by  $subject .
+      										$subject crm:P2_has_type ?type .
+     										  ?type rdfs:label "Print" .
+                         
+                          $subject crm:P49_has_former_or_current_keeper ?keeper.
+												   OPTIONAL {
+                          $subject crm:P108i_was_produced_by ?p.
+      										?p crm:P4_has_time-span ?tm .
+      										?tm crm:P82_at_some_time_within ?date .
+      										?p crm:P14_carried_out_by ?photographer
+        								 }
+         
+  											} ORDER BY ASC(?label)' 
+                id="table-result" 
+                options='{"showFilter": false, "showTableHeading": true}'
+                column-configuration='[
+ 							  {"variableName": "subject", "displayName": "Photo"},             
+                {"variableName": "artwork", "displayName": "Artwork"},
+                {"variableName": "keeper", "displayName": "Keeper"},
+                {"variableName": "photographer", "displayName": "Photographer"},
+                {"variableName": "date", "displayName": "Creation Date"}                    
+                ]'>
+</semantic-table>
+
+<br>
+<br>

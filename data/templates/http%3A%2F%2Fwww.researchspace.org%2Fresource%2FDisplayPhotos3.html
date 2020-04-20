@@ -1,0 +1,38 @@
+<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:20px;width: 33%;display:inline;">
+<h4 align="center"><b>Artworks</b></h4>
+</div>
+
+ <semantic-table 
+                query='PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+
+											 SELECT  distinct $subject ?art ?artist ?collection
+											 WHERE {
+     	                 	$subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+   	 									  ?subject crm:P2_has_type ?type .
+     									  ?type rdfs:label "Photo" .
+            
+                        $art crm:P138i_is_represented_by ?vi.
+                        ?art crm:has_source  ?source_uri.
+                        ?art rdfs:label ?label .
+                        ?source_uri rdfs:label "Frick" .
+                         
+                        ?vi crm:P65i_is_shown_by ?subject .
+
+                        $subject crm:P108i_was_produced_by ?production.
+  										  ?production crm:P14_carried_out_by ?artist. 
+
+  											} ORDER BY ASC(?label)' 
+                id="table-result" 
+                options='{"showFilter": false, "showTableHeading": true}'
+                column-configuration='[
+ 							  {"variableName": "subject", "displayName": "Photo"},             
+
+                {"variableName": "artist", "displayName": "Photographer"},
+                {"variableName": "art", "displayName": "Related Artwork"}                     
+                ]'>
+</semantic-table>
+
+<br>
+<br>

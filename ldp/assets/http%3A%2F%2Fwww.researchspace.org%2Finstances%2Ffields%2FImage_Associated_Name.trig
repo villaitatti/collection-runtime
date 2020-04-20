@@ -1,0 +1,38 @@
+
+<http://www.researchspace.org/instances/fields/Image_Associated_Name/context> {
+  <http://www.researchspace.org/instances/fields/Image_Associated_Name> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-648295d43b8942feb8e65eb0e5e5e094-sp1p2k <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Image_Associated_Name> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-648295d43b8942feb8e65eb0e5e5e094-sp1p2k;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-648295d43b8942feb8e65eb0e5e5e094-yxhy6 .
+  
+  _:genid-648295d43b8942feb8e65eb0e5e5e094-sp1p2k a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Image_Associated_Name> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-648295d43b8942feb8e65eb0e5e5e094-yxhy6 <http://spinrdf.org/sp#text> """SELECT $value ?label
+WHERE {
+   $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+  $subject <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> ?value. 
+  ?value crm:P2_has_type ?type .
+      ?type rdfs:label \"Associated Name\"
+}""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Image_Associated_Name> <http://www.metaphacts.com/ontology/fields#category>
+      <https://collection.itatti.harvard.edu/category/photograph>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Image Associated Name"@en;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-08-29T12:09:15.315Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Image_Associated_Name> .
+  
+  <http://www.researchspace.org/instances/fields/Image_Associated_Name> a <http://www.w3.org/ns/ldp#Resource> .
+}

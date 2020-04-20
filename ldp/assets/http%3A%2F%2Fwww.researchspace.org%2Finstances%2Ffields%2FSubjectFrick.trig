@@ -1,0 +1,36 @@
+
+<http://www.researchspace.org/instances/fields/SubjectFrick/context> {
+  <http://www.researchspace.org/instances/fields/SubjectFrick> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-159050da19a34e01873f4a3c5e4c1b8f-zvwrdn a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-159050da19a34e01873f4a3c5e4c1b8f-xaw4va <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/SubjectFrick> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/artwork_frick>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-159050da19a34e01873f4a3c5e4c1b8f-xaw4va;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Subject"@en;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-159050da19a34e01873f4a3c5e4c1b8f-xaw4va a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/SubjectFrick> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-159050da19a34e01873f4a3c5e4c1b8f-zvwrdn .
+  
+  _:genid-159050da19a34e01873f4a3c5e4c1b8f-zvwrdn <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P67i_is_referred_to_by ?doc .
+      ?doc crm:P2_has_type ?type .
+      ?type rdfs:label \"Subject Description\" .
+   ?doc crm:P190_has_symbolic_content ?value.
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/SubjectFrick> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-10-25T12:48:41.207Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/SubjectFrick> .
+  
+  <http://www.researchspace.org/instances/fields/SubjectFrick> a <http://www.w3.org/ns/ldp#Resource> .
+}

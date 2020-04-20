@@ -1,0 +1,94 @@
+
+<div class="page">
+
+  <div class='page__body'> 
+
+    
+<h1> Field Weight Manager </h1>
+<p>
+Assign Weight Values to Fields. schema.org/weight propery is used
+</p>
+
+
+
+        <!--     BEGIN FIELD WEIGHT FORM INPUT --->
+      
+         <semantic-form 
+      browser-persistence=true
+      persistence='ldp' 
+      fields='[[fieldDefinitions]]'>
+      <bs-panel>
+        <semantic-form-recover-notification></semantic-form-recover-notification>
+        <div style="display: none;">
+
+        </div>
+  <semantic-form-checklist-input type='checkbox' for="http://performing-arts.ch/ldp-assets/fieldDefinitionContainer/Actor_appellation_common_type"></semantic-form-checklist-input>
+
+        <semantic-form-errors></semantic-form-errors>
+        
+        
+        <semantic-form-composite-input 
+               for="http://www.metaphacts.com/fieldDefinition/Field_Weight"
+               new-subject-template=""
+               fields='[[fieldDefinitions
+http://www.metaphacts.com/fieldDefinition/Field="http://www.metaphacts.com/fieldDefinition/Field"
+http://www.metaphacts.com/fieldDefinition/Weight="http://www.metaphacts.com/fieldDefinition/Weight"
+]]'>
+    <semantic-form-autocomplete-input 
+    for="http://www.metaphacts.com/fieldDefinition/Field">
+  </semantic-form-autocomplete-input>
+          
+ <semantic-form-text-input 
+     for="http://www.metaphacts.com/fieldDefinition/Weight">
+ </semantic-form-text-input>
+
+          
+</semantic-form-composite-input>   
+        
+        <button
+          name="submit"
+          class="btn btn-default"
+        >Save</button>
+        <button
+          name="reset"
+          class="btn btn-default"
+        >Reset</button>
+      </bs-panel>
+    </semantic-form>
+   
+
+    
+    
+    <semantic-context repository='assets'>
+            
+            
+               <div data-flex-layout="row stretch-stretch">
+                 <div data-flex-self="size-1of3" style="flex: 0 0 20px;">
+
+                 </div>
+
+            
+                       
+                       
+                                          <semantic-table
+                          id='resources-results'
+                          number-of-displayed-rows=10
+                          query='SELECT ?field ?weight WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> ?domain . ?field <https://schema.org/weight> ?weight }'
+                          column-configuration='[
+                                        {"variableName":"field","displayName":"Field"},
+                                        {"variableName":"weight","displayName":"Weight" }
+                                       
+                                   ]'
+                        >
+                         
+                       </semantic-table>
+                     
+                  
+              </div>
+     
+    </semantic-context>
+  </div>
+</div>
+
+
+

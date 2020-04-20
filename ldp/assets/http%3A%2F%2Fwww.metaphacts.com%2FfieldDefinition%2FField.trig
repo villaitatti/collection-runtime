@@ -1,0 +1,50 @@
+
+<http://www.metaphacts.com/fieldDefinition/Field/context> {
+  <http://www.metaphacts.com/fieldDefinition/Field> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Field"@en;
+    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-63d9dda91f494e00a225da8ee383f017-urjt4l .
+  
+  _:genid-63d9dda91f494e00a225da8ee383f017-urjt4l a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Field> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-63d9dda91f494e00a225da8ee383f017-skh2i <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/Field> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-63d9dda91f494e00a225da8ee383f017-tpaqpt;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-63d9dda91f494e00a225da8ee383f017-skh2i .
+  
+  _:genid-63d9dda91f494e00a225da8ee383f017-skh2i a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-63d9dda91f494e00a225da8ee383f017-tpaqpt a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-63d9dda91f494e00a225da8ee383f017-urjt4l <http://spinrdf.org/sp#text> """prefix bds: <http://www.bigdata.com/rdf/search#>
+SELECT ?value ?label WHERE {
+    ?value a <http://www.metaphacts.com/ontology/fields#Field>.
+    ?value rdfs:label ?label.
+    ?label bds:search ?__token__.
+    ?label bds:matchAllTerms \"true\".
+} LIMIT 15""" .
+  
+  _:genid-63d9dda91f494e00a225da8ee383f017-girpyh a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-63d9dda91f494e00a225da8ee383f017-tpaqpt <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject a <http://www.metaphacts.com/ontology/fields#Field>.
+  ?value rdfs:label  ?value.
+}""" .
+  
+  _:genid-63d9dda91f494e00a225da8ee383f017-girpyh <http://spinrdf.org/sp#text> "DELETE { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/Field> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-63d9dda91f494e00a225da8ee383f017-girpyh;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-09-06T10:56:11.115Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/Field> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Field> a <http://www.w3.org/ns/ldp#Resource> .
+}

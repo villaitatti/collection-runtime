@@ -1,0 +1,36 @@
+
+<http://www.researchspace.org/instances/fields/DesriptionZeri/context> {
+  _:genid-b8a4b4087a0943e89a52593ce32da154-8x2v0e <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/DesriptionZeri> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Desription"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-b8a4b4087a0943e89a52593ce32da154-8x2v0e .
+  
+  _:genid-b8a4b4087a0943e89a52593ce32da154-qj8kv <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P67i_is_referred_to_by ?io.
+  ?io rdfs:label ?label.
+  ?io crm:P2_has_type ?type_uri .
+  ?type_uri rdfs:label \"General Description\" .
+  ?io crm:P190_has_symbolic_content ?value
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/DesriptionZeri> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-b8a4b4087a0943e89a52593ce32da154-qj8kv;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/artwork_zeri> .
+  
+  _:genid-b8a4b4087a0943e89a52593ce32da154-8x2v0e a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-b8a4b4087a0943e89a52593ce32da154-qj8kv a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/DesriptionZeri> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-06T10:57:10.894Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/DesriptionZeri> .
+  
+  <http://www.researchspace.org/instances/fields/DesriptionZeri> a <http://www.w3.org/ns/ldp#Resource> .
+}

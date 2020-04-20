@@ -1,0 +1,37 @@
+
+<http://www.researchspace.org/instances/fields/City_DistrictMar/context> {
+  <http://www.researchspace.org/instances/fields/City_DistrictMar> <http://www.metaphacts.com/ontology/fields#range>
+      <http://www.cidoc-crm.org/cidoc-crm/E53_Place>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-fc45c76eaa434404817a9be3d2fa93f2-vfqeid;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-fc45c76eaa434404817a9be3d2fa93f2-0n2nc7 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+      ?subject crm:P26_moved_to ?value. 
+      ?value crm:P2_has_type ?type2 .
+      ?type2 rdfs:label \"City District\" .
+}""" .
+  
+  _:genid-fc45c76eaa434404817a9be3d2fa93f2-vfqeid a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/City_DistrictMar> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://collection.itatti.harvard.edu/category/artwork_marburg>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-fc45c76eaa434404817a9be3d2fa93f2-0n2nc7;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-fc45c76eaa434404817a9be3d2fa93f2-0n2nc7 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/City_DistrictMar> <http://www.w3.org/2000/01/rdf-schema#label>
+      "City District"@en .
+  
+  _:genid-fc45c76eaa434404817a9be3d2fa93f2-vfqeid <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/City_DistrictMar> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-14T08:22:55.035Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/City_DistrictMar> .
+  
+  <http://www.researchspace.org/instances/fields/City_DistrictMar> a <http://www.w3.org/ns/ldp#Resource> .
+}

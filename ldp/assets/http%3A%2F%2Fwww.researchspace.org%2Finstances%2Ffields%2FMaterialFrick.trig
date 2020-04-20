@@ -1,0 +1,36 @@
+
+<http://www.researchspace.org/instances/fields/MaterialFrick/context> {
+  <http://www.researchspace.org/instances/fields/MaterialFrick> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-8180b4e52a8a49459fea53b93caf0113-zhdm69 .
+  
+  _:genid-8180b4e52a8a49459fea53b93caf0113-zhdm69 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/MaterialFrick> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/artwork_frick> .
+  
+  _:genid-8180b4e52a8a49459fea53b93caf0113-2scy8 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-8180b4e52a8a49459fea53b93caf0113-zhdm69 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P67i_is_referred_to_by ?doc .
+      ?doc crm:P2_has_type ?type .
+      ?type rdfs:label \"Medium Description\" .
+   ?doc crm:P190_has_symbolic_content ?value.
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/MaterialFrick> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-8180b4e52a8a49459fea53b93caf0113-2scy8;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Material"@en;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-8180b4e52a8a49459fea53b93caf0113-2scy8 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/MaterialFrick> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-10-25T12:46:30.062Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/MaterialFrick> .
+  
+  <http://www.researchspace.org/instances/fields/MaterialFrick> a <http://www.w3.org/ns/ldp#Resource> .
+}

@@ -1,0 +1,35 @@
+
+<http://www.researchspace.org/instances/fields/Photo_Technical_Type/context> {
+  <http://www.researchspace.org/instances/fields/Photo_Technical_Type> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E55_Type> .
+  
+  _:genid-3d416ab629c0442c9b8155a720dfb99f-9t14gh <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P2_has_type ?value.
+}""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Photo_Technical_Type> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#category> <https://collection.itatti.harvard.edu/category/photo_marburg> .
+  
+  _:genid-3d416ab629c0442c9b8155a720dfb99f-lf8hnn <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Photo_Technical_Type> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Photo Technical Type"@en;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-3d416ab629c0442c9b8155a720dfb99f-lf8hnn;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/photo_hertz> .
+  
+  _:genid-3d416ab629c0442c9b8155a720dfb99f-lf8hnn a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Photo_Technical_Type> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-3d416ab629c0442c9b8155a720dfb99f-9t14gh;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-13T16:19:43.413Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Photo_Technical_Type> .
+  
+  <http://www.researchspace.org/instances/fields/Photo_Technical_Type> a <http://www.w3.org/ns/ldp#Resource> .
+}

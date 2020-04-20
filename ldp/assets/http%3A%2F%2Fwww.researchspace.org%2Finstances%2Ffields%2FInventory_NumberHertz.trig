@@ -1,0 +1,36 @@
+
+<http://www.researchspace.org/instances/fields/Inventory_NumberHertz/context> {
+  <http://www.researchspace.org/instances/fields/Inventory_NumberHertz> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6a0cab31a0fb47539945da1f60bd9749-kxktg;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6a0cab31a0fb47539945da1f60bd9749-ncc9kr .
+  
+  _:genid-6a0cab31a0fb47539945da1f60bd9749-kxktg a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Inventory_NumberHertz> <http://www.metaphacts.com/ontology/fields#range>
+      <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Inventory Number"@en;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-6a0cab31a0fb47539945da1f60bd9749-ncc9kr a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Inventory_NumberHertz> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/artwork_hertz> .
+  
+  _:genid-6a0cab31a0fb47539945da1f60bd9749-ncc9kr <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P1_is_identified_by ?value.
+  ?value crm:P2_has_type ?type.
+  ?type rdfs:label \"Inventory Number\"
+} """ .
+  
+  _:genid-6a0cab31a0fb47539945da1f60bd9749-kxktg <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Inventory_NumberHertz> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-09-24T19:30:53.574Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Inventory_NumberHertz> .
+  
+  <http://www.researchspace.org/instances/fields/Inventory_NumberHertz> a <http://www.w3.org/ns/ldp#Resource> .
+}

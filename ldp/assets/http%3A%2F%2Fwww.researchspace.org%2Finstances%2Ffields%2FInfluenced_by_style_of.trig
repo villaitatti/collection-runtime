@@ -1,0 +1,50 @@
+
+<http://www.researchspace.org/instances/fields/Influenced_by_style_of/context> {
+  <http://www.researchspace.org/instances/fields/Influenced_by_style_of> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-f6a6c760068e4353859cfe115ecc565d-f9uf6;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-f6a6c760068e4353859cfe115ecc565d-s53uh9;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-f6a6c760068e4353859cfe115ecc565d-f9uf6 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Influenced_by_style_of> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Influenced by (Style of)"@en .
+  
+  _:genid-f6a6c760068e4353859cfe115ecc565d-s53uh9 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Influenced_by_style_of> <http://www.metaphacts.com/ontology/fields#category>
+      <https://collection.itatti.harvard.edu/category/artwork> .
+  
+  _:genid-f6a6c760068e4353859cfe115ecc565d-s53uh9 <http://spinrdf.org/sp#text> """SELECT $value ?label
+ { { 
+   $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+   $subject <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
+   ?production <http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by> ?value .
+   ?production <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type .
+   ?type rdfs:label \"style of\" .
+} 
+      UNION
+        { 
+   $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+   $subject <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
+   ?production <http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by> ?value .
+   ?production <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type .
+   ?type rdfs:label \"Style of\" .
+} 
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/Influenced_by_style_of> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-f6a6c760068e4353859cfe115ecc565d-f9uf6 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Influenced_by_style_of> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-09-16T09:21:11.881Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Influenced_by_style_of> .
+  
+  <http://www.researchspace.org/instances/fields/Influenced_by_style_of> a <http://www.w3.org/ns/ldp#Resource> .
+}

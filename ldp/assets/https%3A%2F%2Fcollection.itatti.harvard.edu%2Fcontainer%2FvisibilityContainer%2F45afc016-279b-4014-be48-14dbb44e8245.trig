@@ -1,0 +1,17 @@
+
+<https://collection.itatti.harvard.edu/container/visibilityContainer/45afc016-279b-4014-be48-14dbb44e8245/context> {
+  <https://collection.itatti.harvard.edu/container/Annotations.Container/bac17a86-f974-463d-ad1f-b65909c9855c>
+    <http://www.metaphacts.com/ontologies/platform#visibility> <http://www.metaphacts.com/ontologies/platform#visibilityPrivate> .
+  
+  <https://collection.itatti.harvard.edu/container/visibilityContainer/45afc016-279b-4014-be48-14dbb44e8245>
+    <http://www.metaphacts.com/ontologies/platform#visibilityItem> <https://collection.itatti.harvard.edu/container/Annotations.Container/bac17a86-f974-463d-ad1f-b65909c9855c>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-11T11:01:43.864Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#visibilityContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://collection.itatti.harvard.edu/container/visibilityContainer/45afc016-279b-4014-be48-14dbb44e8245> .
+  
+  <https://collection.itatti.harvard.edu/container/visibilityContainer/45afc016-279b-4014-be48-14dbb44e8245>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

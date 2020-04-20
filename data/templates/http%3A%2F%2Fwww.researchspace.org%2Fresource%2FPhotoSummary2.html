@@ -1,0 +1,70 @@
+                <semantic-table
+                  id='search-result-grid'
+                  query='
+                     prefix person: <http://example.com/person/> 
+        prefix org: <http://example.com/org/> 
+        SELECT distinct ?recto ?verso ?subject   ?photographer ?note ?timespan WHERE {                    
+         
+             ?? <http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for> ?creation . 
+          ?creation <http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence> ?subject.
+         ?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?recto .
+  ?recto   <http://www.cidoc-crm.org/cidoc-crm/P2_has_type>  <https://collection.itatti.harvard.edu/resource/type/recto>.
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?verso .
+  ?verso   <http://www.cidoc-crm.org/cidoc-crm/P2_has_type>  <https://collection.itatti.harvard.edu/resource/type/verso>.
+          
+          ?subject <http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for> ?production .
+          ?creation <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> ?timespanu . 
+          ?timespanu rdfs:label ?timespan .
+        ?subject   <http://www.cidoc-crm.org/cidoc-crm/P3_has_note>  ?note .
+        ?creation <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> ?photographeru .
+          ?photographeru rdfs:label ?photographer
+                  }'
+                  tuple-template='	
+               <div style="padding:10px;">
+      <div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:150px;width: 100%;">
+        <div class="panel-body" style="height: 100px;">
+          
+          <table align="left">
+                                    <col align="left">
+  <col align="left">
+         <tr>
+          <td> 
+         <semantic-link title="{{subject.value}}" class="grid-resource-link" uri="{{subject.value}}"> <img src="{{recto.value}}" style="max-width:100px; margin: 0 auto;" class="img-rounded">     </semantic-link> 
+          </td>
+                                  
+      <td> 
+         <semantic-link title="{{subject.value}}" class="grid-resource-link" uri="{{subject.value}}"> <img src="{{verso.value}}" style="max-width:100px; margin: 0 auto; height: 80px;" class="img-rounded">     </semantic-link> 
+          </td>
+                                  
+                                   <td  style="text-align:left">
+                              Image Note: <semantic-link title="{{subject.value}}" class="grid-resource-link" uri="{{subject.value}}">
+           {{note.value}}
+          </semantic-link> 
+                                   <br>
+                                
+         
+                                     Image Date: <semantic-link title="{{subject.value}}" class="grid-resource-link" uri="{{subject.value}}">
+           {{timespan.value}}
+          </semantic-link>
+                               <br>
+                                
+         
+                                     Photographer: <semantic-link title="{{subject.value}}" class="grid-resource-link" uri="{{subject.value}}">
+           {{photographer.value}}
+          </semantic-link>
+          </td>
+           </tr>
+         
+           
+                                  </table>
+
+        </div>
+
+      </div>
+    </div>'
+                                  
+               >
+                  
+       
+                </semantic-table>     
+

@@ -1,0 +1,38 @@
+<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:20px;width: 33%;display:inline;">
+<h4 align="center"><b>Artworks</b></h4>
+</div>
+
+ <semantic-table 
+                query='PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+											 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		 									 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+
+											 SELECT  distinct $subject ?label ?artist ?collection
+											 WHERE {
+     	                 	$subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+   											$subject rdfs:label ?label .
+  											?subject crm:has_soure  ?source_uri.
+                        ?source_uri rdfs:label ?source .
+                        $subject crm:P1_is_identified_by ?title_uri .
+                        ?title_uri rdfs:label ?title .
+                        ?title_uri crm:P2_has_type ?title_type .
+                        ?title_type rdfs:label "Title" .
+                        $subject crm:P108i_was_produced_by ?production.
+  										  ?production crm:P01i_is_domain_of ?domain .
+  										  ?domain crm:P02_has_range ?artist. 
+                        OPTIONAL {
+                        $subject crm:P51_has_former_or_current_owner ?collection
+                                 }
+  											} ORDER BY ASC(?label)' 
+                id="table-result" 
+                options='{"showFilter": false, "showTableHeading": true}'
+                column-configuration='[
+ 							  {"variableName": "subject", "displayName": "Artwork"},             
+
+                {"variableName": "artist", "displayName": "Artist"},
+                {"variableName": "collection", "displayName": "Collection"}                     
+                ]'>
+</semantic-table>
+
+<br>
+<br>

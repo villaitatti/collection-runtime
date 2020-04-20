@@ -1,0 +1,20 @@
+
+<semantic-query query='
+        SELECT * WHERE {
+         ?subject1 <http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for> ?creation . ?creation <http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence> ?subject. 
+          
+        } ' 
+                
+                	template='{{> Default:LoopTemplate}}' no-result-template='No information available from wikidata.'>
+ 
+       </semantic-query>  
+
+
+
+
+
+[[#each subject]]
+ asdasd
+[[/each]]
+
+       

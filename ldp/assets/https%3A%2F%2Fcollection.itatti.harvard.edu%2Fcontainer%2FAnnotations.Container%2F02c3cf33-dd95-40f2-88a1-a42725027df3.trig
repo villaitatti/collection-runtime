@@ -1,0 +1,35 @@
+
+<https://collection.itatti.harvard.edu/container/Annotations.Container/02c3cf33-dd95-40f2-88a1-a42725027df3/context> {
+  <https://collection.itatti.harvard.edu/container/Annotations.Container/02c3cf33-dd95-40f2-88a1-a42725027df3>
+    a <http://www.researchspace.org/ontology/Annotation>, <http://www.w3.org/ns/oa#Annotation>;
+    <http://www.w3.org/ns/oa#hasTarget> <https://collection.itatti.harvard.edu/fieldDefinition/Title>;
+    a <http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object>;
+    <http://www.ics.forth.gr/isl/CRMdig/L43_annotates> <https://collection.itatti.harvard.edu/fieldDefinition/Title> .
+  
+  <https://collection.itatti.harvard.edu/container/Annotations.Container/02c3cf33-dd95-40f2-88a1-a42725027df3/event>
+    <http://www.ics.forth.gr/isl/CRMdig/L48_created_annotation> <https://collection.itatti.harvard.edu/container/Annotations.Container/02c3cf33-dd95-40f2-88a1-a42725027df3>;
+    <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.cidoc-crm.org/cidoc-crm/P4_has_time_span> <https://collection.itatti.harvard.edu/container/Annotations.Container/02c3cf33-dd95-40f2-88a1-a42725027df3/event/timespan> .
+  
+  <https://collection.itatti.harvard.edu/container/Annotations.Container/02c3cf33-dd95-40f2-88a1-a42725027df3/event/timespan>
+    a <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span>;
+    <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> "2019-10-15T12:17:27.553Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://www.cidoc-crm.org/cidoc-crm/P82a_end_of_the_end> "2019-10-15T12:17:27.553Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://collection.itatti.harvard.edu/container/Annotations.Container/02c3cf33-dd95-40f2-88a1-a42725027df3/body>
+    a <http://www.w3.org/ns/oa#TextualBody>;
+    <http://www.w3.org/ns/oa#text> "{\"id\":\"01acbdd7-891c-42c4-9b8a-a7372982e019\",\"cells\":[{\"id\":\"f561e350-87bb-4383-9282-1275455facef\",\"inline\":null,\"size\":12,\"content\":{\"plugin\":{\"name\":\"ory/editor/core/content/slate\",\"version\":\"0.0.1\"},\"state\":{\"serialized\":{\"nodes\":[{\"kind\":\"block\",\"type\":\"PARAGRAPH/PARAGRAPH\",\"nodes\":[{\"kind\":\"text\",\"text\":\"\"}]}]}}}}]}";
+    <http://purl.org/dc/elements/1.1/format> "text/html" .
+  
+  <https://collection.itatti.harvard.edu/container/Annotations.Container/02c3cf33-dd95-40f2-88a1-a42725027df3>
+    <http://www.w3.org/ns/oa#hasBody> <https://collection.itatti.harvard.edu/container/Annotations.Container/02c3cf33-dd95-40f2-88a1-a42725027df3/body>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-10-15T12:17:27.553Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.researchspace.org/ontology/Annotations.Container> <http://www.w3.org/ns/ldp#contains>
+      <https://collection.itatti.harvard.edu/container/Annotations.Container/02c3cf33-dd95-40f2-88a1-a42725027df3> .
+  
+  <https://collection.itatti.harvard.edu/container/Annotations.Container/02c3cf33-dd95-40f2-88a1-a42725027df3>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

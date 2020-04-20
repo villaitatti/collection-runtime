@@ -1,0 +1,37 @@
+
+<http://www.researchspace.org/instances/fields/MediumZeriPhoto/context> {
+  <http://www.researchspace.org/instances/fields/MediumZeriPhoto> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-eb3cb8b4fac348b08e0dea5b09b456a4-nopglj .
+  
+  _:genid-eb3cb8b4fac348b08e0dea5b09b456a4-iu2dh <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/MediumZeriPhoto> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/photo_zeri>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Medium"@en .
+  
+  _:genid-eb3cb8b4fac348b08e0dea5b09b456a4-nopglj <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P67i_is_referred_to_by ?io.
+  ?io crm:P2_has_type ?stype .
+  ?stype rdfs:label \"Medium and Materials Description\" .
+  ?io crm:P190_has_symbolic_content ?value .
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/MediumZeriPhoto> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-eb3cb8b4fac348b08e0dea5b09b456a4-iu2dh .
+  
+  _:genid-eb3cb8b4fac348b08e0dea5b09b456a4-nopglj a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-eb3cb8b4fac348b08e0dea5b09b456a4-iu2dh a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/MediumZeriPhoto> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-07T08:30:30.722Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/MediumZeriPhoto> .
+  
+  <http://www.researchspace.org/instances/fields/MediumZeriPhoto> a <http://www.w3.org/ns/ldp#Resource> .
+}

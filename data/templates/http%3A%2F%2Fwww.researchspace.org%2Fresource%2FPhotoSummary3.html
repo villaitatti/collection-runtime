@@ -1,0 +1,58 @@
+        <semantic-table
+                  id='search-result-grid'
+                  query='
+                     prefix person: <http://example.com/person/> 
+        prefix org: <http://example.com/org/> 
+prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> 
+        SELECT distinct ?subject ?keeper ?material ?image WHERE {                    
+
+            ?? crm:P138i_is_represented_by ?vi.
+     				?vi crm:P65i_is_shown_by ?subject .
+?subject crm:P2_has_type ?type .
+      			?type rdfs:label "Print" .
+            ?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?image.
+           $subject crm:P49_has_former_or_current_keeper ?keeper2.
+          ?keeper2 rdfs:label ?keeper .
+$subject crm:P45_consists_of ?material2 .
+     	?material2  rdfs:label ?material 		
+                  }'
+                 tuple-template='	
+               <div style="padding:10px;">
+      <div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:150px;width: 100%;">
+        <div class="panel-body" style="height: 100px;">
+          
+          <table align="left">
+                                    <col align="left">
+  <col align="left">
+         <tr>
+          <td> 
+         <semantic-link title="{{subject.value}}" class="grid-resource-link" uri="{{subject.value}}"> <img src="{{image.value}}" style="max-width:100px; margin: 0 auto;" class="img-rounded">     </semantic-link> 
+          </td>
+   
+                                  
+                                   <td  style="text-align:left">
+                              Image Keeper: <semantic-link title="{{subject.value}}" class="grid-resource-link" uri="{{subject.value}}">
+           {{keeper.value}}
+          </semantic-link> 
+                                   <br>
+                                
+         
+                                     Material: <semantic-link title="{{subject.value}}" class="grid-resource-link" uri="{{subject.value}}">
+           {{material.value}}
+          </semantic-link>
+              
+          </td>
+           </tr>
+         
+           
+                                  </table>
+
+        </div>
+
+      </div>
+    </div>'  
+               >
+              
+       
+                </semantic-table>     
+

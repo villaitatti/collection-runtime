@@ -1,0 +1,17 @@
+
+<https://collection.itatti.harvard.edu/container/queryTemplateContainer/delete-recto-verso/context> {
+  <https://collection.itatti.harvard.edu/container/queryTemplateContainer/delete-recto-verso>
+    a <http://spinrdf.org/spin#Template>, <http://spinrdf.org/spin#UpdateTemplate>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "delete recto-verso";
+    <http://www.w3.org/2000/01/rdf-schema#comment> "delete recto-verso";
+    <http://spinrdf.org/spin#body> <https://collection.itatti.harvard.edu/container/queryContainer/delete_recto-verso>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-06-24T13:07:36.999Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#queryTemplateContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://collection.itatti.harvard.edu/container/queryTemplateContainer/delete-recto-verso> .
+  
+  <https://collection.itatti.harvard.edu/container/queryTemplateContainer/delete-recto-verso>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

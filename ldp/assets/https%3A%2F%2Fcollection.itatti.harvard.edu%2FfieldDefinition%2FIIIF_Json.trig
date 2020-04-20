@@ -1,0 +1,35 @@
+
+<https://collection.itatti.harvard.edu/fieldDefinition/IIIF_Json/context> {
+  <https://collection.itatti.harvard.edu/fieldDefinition/IIIF_Json> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-da1180fde2514e6ca63373745c15d29a-rukwcs;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-da1180fde2514e6ca63373745c15d29a-rukwcs a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-da1180fde2514e6ca63373745c15d29a-66vrgyl <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+ ?subject <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?image .
+ ?image <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of> ?value
+}""" .
+  
+  <https://collection.itatti.harvard.edu/fieldDefinition/IIIF_Json> <http://www.w3.org/2000/01/rdf-schema#label>
+      "IIIF JSON"@en;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-da1180fde2514e6ca63373745c15d29a-66vrgyl;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-da1180fde2514e6ca63373745c15d29a-rukwcs <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://collection.itatti.harvard.edu/fieldDefinition/IIIF_Json> <http://www.metaphacts.com/ontology/fields#category>
+      <https://collection.itatti.harvard.edu/category/photograph> .
+  
+  _:genid-da1180fde2514e6ca63373745c15d29a-66vrgyl a <http://spinrdf.org/sp#Query> .
+  
+  <https://collection.itatti.harvard.edu/fieldDefinition/IIIF_Json> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-01-09T18:46:12.406Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://collection.itatti.harvard.edu/fieldDefinition/IIIF_Json> .
+  
+  <https://collection.itatti.harvard.edu/fieldDefinition/IIIF_Json> a <http://www.w3.org/ns/ldp#Resource> .
+}

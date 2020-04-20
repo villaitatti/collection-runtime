@@ -1,0 +1,37 @@
+
+<http://www.researchspace.org/instances/fields/ConditionZeri/context> {
+  <http://www.researchspace.org/instances/fields/ConditionZeri> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E55_Type>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Condition"@en;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/photo_zeri> .
+  
+  _:genid-6550710879144cd4baf6dd7546a4cec6-hf82q7 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/ConditionZeri> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-6550710879144cd4baf6dd7546a4cec6-ng57d3 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-6550710879144cd4baf6dd7546a4cec6-hf82q7 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P34i_was_assessed_by ?io.
+  ?io crm:P35_has_identified ?stype .
+  ?stype crm:P2_has_type ?value .
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/ConditionZeri> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6550710879144cd4baf6dd7546a4cec6-ng57d3 .
+  
+  _:genid-6550710879144cd4baf6dd7546a4cec6-ng57d3 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/ConditionZeri> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-6550710879144cd4baf6dd7546a4cec6-hf82q7;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-07T08:32:31.074Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/ConditionZeri> .
+  
+  <http://www.researchspace.org/instances/fields/ConditionZeri> a <http://www.w3.org/ns/ldp#Resource> .
+}

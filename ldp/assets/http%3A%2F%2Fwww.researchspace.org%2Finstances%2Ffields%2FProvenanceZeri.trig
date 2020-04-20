@@ -1,0 +1,40 @@
+
+<http://www.researchspace.org/instances/fields/ProvenanceZeri/context> {
+  <http://www.researchspace.org/instances/fields/ProvenanceZeri> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-dd1ac0932ea44b91931f412aaec7cb70-jzcull a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/ProvenanceZeri> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/photo_zeri> .
+  
+  _:genid-dd1ac0932ea44b91931f412aaec7cb70-m3kbuj <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P24i_changed_ownership_through ?pro.
+  ?pro crm:P4_has_time-span ?tm.
+      ?tm crm:P82a_begin_of_the_begin ?date .
+      ?pro crm:P7_took_place_at ?place .
+      ?place rdfs:label ?pl .
+      BIND(CONCAT(STR(?pl),\" (\",STR(?date),\")\") as ?value)
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/ProvenanceZeri> <http://www.metaphacts.com/ontology/fields#category>
+      <http://www.metaphacts.com/ontologies/platform/FieldCategories/artwork_zeri>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-dd1ac0932ea44b91931f412aaec7cb70-m3kbuj;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-dd1ac0932ea44b91931f412aaec7cb70-m3kbuj a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-dd1ac0932ea44b91931f412aaec7cb70-jzcull <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/ProvenanceZeri> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-dd1ac0932ea44b91931f412aaec7cb70-jzcull;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Provenance"@en;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-06T16:47:01.353Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/ProvenanceZeri> .
+  
+  <http://www.researchspace.org/instances/fields/ProvenanceZeri> a <http://www.w3.org/ns/ldp#Resource> .
+}

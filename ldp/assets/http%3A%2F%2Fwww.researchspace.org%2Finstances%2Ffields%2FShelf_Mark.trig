@@ -1,0 +1,35 @@
+
+<http://www.researchspace.org/instances/fields/Shelf_Mark/context> {
+  <http://www.researchspace.org/instances/fields/Shelf_Mark> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/photo_zeri> .
+  
+  _:genid-edc6f0921ad14d21bc9c78cf120014de-eatggj <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Shelf_Mark> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-edc6f0921ad14d21bc9c78cf120014de-eatggj;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-edc6f0921ad14d21bc9c78cf120014de-h8z72;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-edc6f0921ad14d21bc9c78cf120014de-eatggj a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-edc6f0921ad14d21bc9c78cf120014de-h8z72 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P46i_forms_part_of ?col.
+      ?col crm:P1_is_identified_by  ?value .
+            ?value crm:P2_has_type ?type .
+      ?type rdfs:label \"Shelf Mark\"
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/Shelf_Mark> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Shelf Mark"@en;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-11-06T16:58:37.509Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Shelf_Mark> .
+  
+  <http://www.researchspace.org/instances/fields/Shelf_Mark> a <http://www.w3.org/ns/ldp#Resource> .
+}

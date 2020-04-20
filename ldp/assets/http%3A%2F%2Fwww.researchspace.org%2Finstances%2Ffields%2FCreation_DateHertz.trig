@@ -1,0 +1,35 @@
+
+<http://www.researchspace.org/instances/fields/Creation_DateHertz/context> {
+  <http://www.researchspace.org/instances/fields/Creation_DateHertz> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-1894ef5af910457bb3b5a600c7d6889c-z5gncl <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P108i_was_produced_by ?production.
+  ?production crm:P4_has_time-span ?tm .
+  ?tm crm:P82_at_some_time_within ?value
+}""" .
+  
+  _:genid-1894ef5af910457bb3b5a600c7d6889c-q79pui <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Creation_DateHertz> <http://www.metaphacts.com/ontology/fields#category>
+      <https://collection.itatti.harvard.edu/category/artwork_hertziana>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-1894ef5af910457bb3b5a600c7d6889c-q79pui;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Creation Date"@en;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-1894ef5af910457bb3b5a600c7d6889c-z5gncl;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-1894ef5af910457bb3b5a600c7d6889c-q79pui a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Creation_DateHertz> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-1894ef5af910457bb3b5a600c7d6889c-z5gncl a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Creation_DateHertz> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-09-25T13:20:25.310Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Creation_DateHertz> .
+  
+  <http://www.researchspace.org/instances/fields/Creation_DateHertz> a <http://www.w3.org/ns/ldp#Resource> .
+}

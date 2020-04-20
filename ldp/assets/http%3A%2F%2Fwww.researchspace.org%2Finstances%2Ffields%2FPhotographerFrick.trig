@@ -1,0 +1,36 @@
+
+<http://www.researchspace.org/instances/fields/PhotographerFrick/context> {
+  <http://www.researchspace.org/instances/fields/PhotographerFrick> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-19a7a47279914cdb9dce5129a39f8058-ayle5 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P108i_was_produced_by ?production.
+  ?production crm:P14_carried_out_by ?value.
+
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/PhotographerFrick> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-19a7a47279914cdb9dce5129a39f8058-ayle5;
+    <http://www.metaphacts.com/ontology/fields#category> <http://www.metaphacts.com/ontologies/platform/FieldCategories/photo_frick> .
+  
+  _:genid-19a7a47279914cdb9dce5129a39f8058-lvg45g <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/PhotographerFrick> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Photographer"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-19a7a47279914cdb9dce5129a39f8058-lvg45g .
+  
+  _:genid-19a7a47279914cdb9dce5129a39f8058-ayle5 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-19a7a47279914cdb9dce5129a39f8058-lvg45g a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/PhotographerFrick> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-10-31T19:04:00.216Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/PhotographerFrick> .
+  
+  <http://www.researchspace.org/instances/fields/PhotographerFrick> a <http://www.w3.org/ns/ldp#Resource> .
+}

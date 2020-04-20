@@ -1,0 +1,38 @@
+
+<http://www.researchspace.org/instances/fields/Influenced/context> {
+  <http://www.researchspace.org/instances/fields/Influenced> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-85c0bd9356e241c9a6fc303f2329bd37-of0x1;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-85c0bd9356e241c9a6fc303f2329bd37-9wfqlv <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Influenced> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
+  
+  _:genid-85c0bd9356e241c9a6fc303f2329bd37-of0x1 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Influenced> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-85c0bd9356e241c9a6fc303f2329bd37-9wfqlv .
+  
+  _:genid-85c0bd9356e241c9a6fc303f2329bd37-of0x1 <http://spinrdf.org/sp#text> """SELECT $value ?label
+WHERE {
+?production <http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by> ?subject .
+  ?value <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production.
+
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/Influenced> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Influenced"@en .
+  
+  _:genid-85c0bd9356e241c9a6fc303f2329bd37-9wfqlv a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Influenced> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2019-07-15T14:15:27.625Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Influenced> .
+  
+  <http://www.researchspace.org/instances/fields/Influenced> a <http://www.w3.org/ns/ldp#Resource> .
+}

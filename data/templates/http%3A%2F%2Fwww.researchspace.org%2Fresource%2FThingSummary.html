@@ -1,0 +1,177 @@
+ 
+
+
+
+<div data-flex-layout='row'>
+  [[> rsp:RecordImage]]
+
+  <div class='rs-page__summary' style='width:70%;'>
+  
+    
+    [[#*inline "values"]]
+    <div class='rs-entity-fields'>
+      <mp-panel collapsible=true default-expanded=true bs-style='[[#if asserted]]info[[else]]success[[/if]]'>
+        <mp-panel-header>
+          <div data-flex-layout="row center-left">
+            <span>[[title]]</span>
+          </div>
+        </mp-panel-header>
+        <mp-panel-body>
+          <div class="rs-page__summary-content table-responsive">
+            <table class='table'>
+              <thead role="header">
+              <tr>
+                <th></th>
+                <th></th>
+                <th class="rs-page__count--title">Source</th>
+                <th class="rs-page__count--title"><div class="icon--annotation fa fa-pencil"></div>Annotations</th>
+                <th class="rs-page__count--title"><span class="icon--assertion"></span>Assertions</th>
+              </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+       
+            
+         
+            [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/page/aat/300133025> .}}')]]
+            <mp-field-visualization
+              subject=[[this]]
+              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object.     ?field <http://www.metaphacts.com/ontology/fields#category>  <https://collection.itatti.harvard.edu/category/artwork>   . OPTIONAL {?field <https://schema.org/weight> ?w}} ORDER BY ASC(?w)"]]'
+              template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
+            ></mp-field-visualization>
+            
+            
+              <h4>Photographs</h4>
+                   [[> rsp:PhotoSummary2]]
+           [[/if]]
+            
+             [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/has_soure> <http://foto.biblhertz.it/source/Hertziana> .}}')]]
+            <mp-field-visualization
+              subject=[[this]]
+              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object.     ?field <http://www.metaphacts.com/ontology/fields#category>   <http://www.metaphacts.com/ontologies/platform/FieldCategories/artwork_hertz>   . OPTIONAL {?field <https://schema.org/weight> ?w}} ORDER BY ASC(?w)"]]'
+              template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
+            ></mp-field-visualization>
+            
+            
+              <h4>Photographs</h4>
+                   [[> rsp:PhotoSummary3]]
+            
+           [[/if]]
+            
+              [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/has_sour> <http://zericollection.com/source/Zeri> .}}')]]
+            <mp-field-visualization
+              subject=[[this]]
+              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object.     ?field <http://www.metaphacts.com/ontology/fields#category>   <http://www.metaphacts.com/ontologies/platform/FieldCategories/artwork_zeri>   . OPTIONAL {?field <https://schema.org/weight> ?w}} ORDER BY ASC(?w)"]]'
+              template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
+            ></mp-field-visualization>
+            
+            
+              <h4>Photographs</h4>
+                   [[> rsp:PhotoSummary3]]
+            
+           [[/if]]
+            
+             [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/has_source> <http://frickcollection.com/source/Frick> .}}')]]
+            <mp-field-visualization
+              subject=[[this]]
+              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object.     ?field <http://www.metaphacts.com/ontology/fields#category>   <http://www.metaphacts.com/ontologies/platform/FieldCategories/artwork_frick>   . OPTIONAL {?field <https://schema.org/weight> ?w}} ORDER BY ASC(?w)"]]'
+              template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
+            ></mp-field-visualization>
+            
+            
+              <h4>Photographs</h4>
+                   [[> rsp:PhotoSummary3]]
+            
+           [[/if]]
+            
+ [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/has_source> <http://bildarchiv.foto.marburg.com/source/Marburg> .}}')]]
+            <mp-field-visualization
+              subject=[[this]]
+              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object.     ?field <http://www.metaphacts.com/ontology/fields#category>   <https://collection.itatti.harvard.edu/category/artwork_marburg>    . OPTIONAL {?field <https://schema.org/weight> ?w}} ORDER BY ASC(?w)"]]'
+              template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
+            ></mp-field-visualization>
+            
+            
+              <h4>Photographs</h4>
+                   [[> rsp:PhotoSummary3]]
+            
+           [[/if]]
+            
+                        [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://foto.biblhertz.it/type/Print> .}}')]]
+            <mp-field-visualization
+              subject=[[this]]
+              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object.     ?field <http://www.metaphacts.com/ontology/fields#category>   <http://www.metaphacts.com/ontologies/platform/FieldCategories/photo_hertz>   . OPTIONAL {?field <https://schema.org/weight> ?w}} ORDER BY ASC(?w)"]]'
+              template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
+            ></mp-field-visualization>
+            
+            
+
+            
+  
+           [[/if]]
+            
+                                           [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://zericollection.com/type/Photo> .}}')]]
+            <mp-field-visualization
+              subject=[[this]]
+              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object.     ?field <http://www.metaphacts.com/ontology/fields#category>   <http://www.metaphacts.com/ontologies/platform/FieldCategories/photo_zeri>   . OPTIONAL {?field <https://schema.org/weight> ?w}} ORDER BY ASC(?w)"]]'
+              template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
+            ></mp-field-visualization>
+              [[/if]]
+            
+                 [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://frickcollection.com/type/Photo> .}}')]]
+            <mp-field-visualization
+              subject=[[this]]
+              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object.     ?field <http://www.metaphacts.com/ontology/fields#category>   <http://www.metaphacts.com/ontologies/platform/FieldCategories/photo_frick>   . OPTIONAL {?field <https://schema.org/weight> ?w}} ORDER BY ASC(?w)"]]'
+              template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
+            ></mp-field-visualization>
+              [[/if]]
+            
+            
+               [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/page/aat/300128359> .}}')]]
+            <mp-field-visualization
+              subject=[[this]]
+              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object.   ?field <http://www.metaphacts.com/ontology/fields#category>  <https://collection.itatti.harvard.edu/category/photograph>   .  OPTIONAL {?field <https://schema.org/weight> ?w}} ORDER BY ASC(?w)"]]'
+              template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
+            ></mp-field-visualization>
+        
+
+
+            
+            
+               [[/if]]
+            
+            
+              [[#if (ask 'ASK {{?? <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://bildarchiv.foto.marburg.com/type/Print> .}}')]]
+            <mp-field-visualization
+              subject=[[this]]
+              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E22_Man-Made_Object.     ?field <http://www.metaphacts.com/ontology/fields#category>   <https://collection.itatti.harvard.edu/category/photo_marburg>   . OPTIONAL {?field <https://schema.org/weight> ?w}} ORDER BY ASC(?w)"]]'
+              template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
+            ></mp-field-visualization>
+            
+            
+
+            
+  
+           [[/if]]
+            
+            <div style="margin-top:18px;margin-left:20px;">
+              <mp-overlay-dialog title="All available fields for [[singleValueFromSelect 'SELECT ?label WHERE {?? (rdfs:label | rso:displayLabel) ?label}']]" bs-size='lg'>
+                <mp-overlay-dialog-trigger>
+                  <strong><a>Assert new value...</a></strong>
+                </mp-overlay-dialog-trigger>
+                <mp-overlay-dialog-content>
+                  <mp-page-loader iri="http://www.researchspace.org/resource/AllFieldsModal" urlqueryparam-type='crm:E22_Man-Made_Object'></mp-page-loader>
+                </mp-overlay-dialog-content>
+              </mp-overlay-dialog>
+            </div>
+          </div>
+        </mp-panel-body>
+      </mp-panel>
+    </div>
+    [[/inline]]
+
+    [[> values title='Pharos']]
+
+  </div>
+       
+</div>
