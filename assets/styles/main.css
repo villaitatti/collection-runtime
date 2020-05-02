@@ -52,8 +52,9 @@
     background-color: #1C252C;
 }
 
+
 #main-header-dropdown {
-    background-color: #344655 !important;
+    background-color: #3f4b54 !important;
     color: white !important;
 }
 
@@ -62,13 +63,42 @@
     color: white !important;
 }
 
+
 .footer {
     z-index: 40;
     width: 100%;
-    background-color: #1C252C;
+    background-color: #1C252C !important;
     color: #fff;
 }
 
 .footer__pixel-groove {
     visibility: hidden;
+}
+
+.footer-header {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#footer-columns-container {
+    padding: 30px !important;
+    font-size: 13px;
+    line-height: normal;
+    margin-bottom: 50px;
+    height: 100%;
+    display: block;
+    overflow: auto;
+}
+
+.component-page-toolbar {
+    z-index: 0 !important;
+}
+
+.navbar-collapse {
+    overflow: visible !important;
+}
+
+.navbar-default .navbar-toggle.collapsed .icon-bar {
+    background-color: #1C252C;
 }
