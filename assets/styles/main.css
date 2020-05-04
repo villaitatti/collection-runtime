@@ -92,7 +92,7 @@
 }
 
 .component-page-toolbar {
-    z-index: 0 !important;
+    z-index: 10 !important;
 }
 
 .navbar-collapse {
