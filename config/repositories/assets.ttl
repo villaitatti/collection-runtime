@@ -10,3 +10,4 @@
       proxy:proxiedID "default"
     ];
   rdfs:label "assetsrepository for platform." .
+
