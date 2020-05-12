@@ -53,10 +53,6 @@
 }
 
 
-#main-header-dropdown {
-    background-color: #3f4b54 !important;
-    color: white !important;
-}
 
 #main-header-dropdown:hover {
     background-color: #1C252C !important;
@@ -101,4 +97,14 @@
 
 .navbar-default .navbar-toggle.collapsed .icon-bar {
     background-color: #1C252C;
+}
+
+#main-header-dropdown {
+    background-color: #3f4b54 !important;
+    color: white !important;
+}
+
+.metaphacts-header-navbar .navbar-nav > li > a[title^='login'] {
+    background-color: #3f4b54 !important;
+    color: #ffffff !important;
 }
