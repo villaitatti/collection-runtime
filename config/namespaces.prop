@@ -3,5 +3,3 @@ sim = http://purl.org/ontology/similarity/
 iiif = http://iiif.io/api/
 schema = http://schema.org/
 Default = https://collection.itatti.harvard.edu/resource/
-yashiro-document = https://collection.itatti.harvard.edu/resource/yashiro/document/
-yashiro-person = https://collection.itatti.harvard.edu/resource/yashiro/person/ 
