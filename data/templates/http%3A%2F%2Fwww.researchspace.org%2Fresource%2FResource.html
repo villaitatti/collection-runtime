@@ -1,13 +1,9 @@
-<ol class="page-breadcrumb">
-  <li>
-    <mp-link title="Home" url="/">Home</mp-link>
-  </li>
-  <li class="active">
-    <mp-label iri='[[this]]'></mp-label>
-  </li>
-</ol>
+[[> "https://collection.itatti.harvard.edu/resource/yashiro/header"]]
+<!-- main container open -->
+<div id="main-container" class="container-fluid">
+    <!-- /main container open -->
 
-<div class="page rs-page">
+
   [[#> rsp:ClipboardSidebar]]
   <div class="page__header-navtabs">
     [[> rsp:Header fc=fc fcLabel=fcLabel]]
@@ -70,5 +66,21 @@ image-id-pattern=' BIND("image" AS ?type). BIND(?__iri__ AS ?imageIRI). ?__iri__
         </bs-tab-content>
       </div>
     </bs-tab-container>
+    </bs-tab-container>
     [[/rsp:ClipboardSidebar]]
+
+    <!-- main container end -->
 </div>
+<!-- /main container end -->
+[[> "https://collection.itatti.harvard.edu/resource/yashiro/footer"]]
+
+
+<style>
+    #yashiro-menu {
+        margin-bottom: 0;
+    }
+
+    #main-container {
+        padding-left: 0 !important;
+    }
+</style>
