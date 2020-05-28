@@ -1,0 +1,29 @@
+
+<http://www.metaphacts.com/fieldDefinition/People/context> {
+  <http://www.metaphacts.com/fieldDefinition/People> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "People"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-b3ff6d95c2c9431ba981b91113214099-y66558 .
+  
+  _:genid-b3ff6d95c2c9431ba981b91113214099-y66558 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/People> <http://www.metaphacts.com/ontology/fields#autosuggestionPattern>
+      _:genid-b3ff6d95c2c9431ba981b91113214099-cgoyr8 .
+  
+  _:genid-b3ff6d95c2c9431ba981b91113214099-cgoyr8 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?person rdf:type crm:E21_Person.
+  ?person crm:P1_is_identified_by ?value.
+  ?value rdfs:label ?label.
+  FILTER REGEX(STR(?label), \"?token\")
+} LIMIT 10""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/People> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-18T05:48:53.177Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/People> .
+  
+  <http://www.metaphacts.com/fieldDefinition/People> a <http://www.w3.org/ns/ldp#Resource> .
+}

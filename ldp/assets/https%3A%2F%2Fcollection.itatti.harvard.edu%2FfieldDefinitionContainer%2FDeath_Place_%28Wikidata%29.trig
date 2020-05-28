@@ -1,0 +1,43 @@
+
+<https://collection.itatti.harvard.edu/fieldDefinitionContainer/Death_Place_(Wikidata)/context> {
+  <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Death_Place_(Wikidata)>
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-4ff4d7189e3448e48f780f20c0542beb-g2hw0o .
+  
+  _:genid-4ff4d7189e3448e48f780f20c0542beb-xigorj <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Death_Place_(Wikidata)>
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
+  
+  _:genid-4ff4d7189e3448e48f780f20c0542beb-g2hw0o a <http://spinrdf.org/sp#Query> .
+  
+  <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Death_Place_(Wikidata)>
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-4ff4d7189e3448e48f780f20c0542beb-xigorj .
+  
+  _:genid-4ff4d7189e3448e48f780f20c0542beb-g2hw0o <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?subject owl:sameAs ?wikidataURI . 
+  service <https://query.wikidata.org/sparql> {
+   ?wikidataURI <http://www.wikidata.org/prop/direct/P20> ?deathplace .
+    ?deathplace rdfs:label ?value .
+FILTER(LANG(?value) = \"en\")    
+  }
+}
+""" .
+  
+  <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Death_Place_(Wikidata)>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Death Place (Wikidata)" .
+  
+  _:genid-4ff4d7189e3448e48f780f20c0542beb-xigorj a <http://spinrdf.org/sp#Query> .
+  
+  <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Death_Place_(Wikidata)>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-17T11:19:23.888Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Death_Place_(Wikidata)> .
+  
+  <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Death_Place_(Wikidata)>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

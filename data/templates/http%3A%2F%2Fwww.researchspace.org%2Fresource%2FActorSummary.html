@@ -1,3 +1,4 @@
+
 <div data-flex-layout='row'>
   [[> rsp:RecordImage]]
 
@@ -14,7 +15,7 @@
           <div class="rs-page__summary-content table-responsive">
             <mp-field-visualization
               subject='[[this]]'
-              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E21_Person . BIND(IF(?field = <http://www.researchspace.org/instances/fields/PersonhasName>, 0, 1) as ?order)} ORDER BY ASC(?order) ?field"]]'
+              fields='[[fieldDefinitionsFromQuery "SELECT ?field WHERE { ?field <http://www.metaphacts.com/ontology/fields#domain> crm:E21_Person . OPTIONAL {?field <http://www.metaphacts.com/ontology/fields#order> ?w}} ORDER BY DESC(?w)"]]'
               template='{{> rsp:FieldBasedVisualization subject="[[this]]" [[#if asserted]]guess="true"[[/if]]}}'
             ></mp-field-visualization>
             <div style="margin-top:18px;margin-left:20px;">
@@ -35,9 +36,11 @@
     </div>
     [[/inline]]
 
-    [[> values title='I Tatti']]
+    [[> values title='']]
 
 
 
   </div>
 </div>
+
+  

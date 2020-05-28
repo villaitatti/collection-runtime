@@ -1,4 +1,21 @@
-<div>{{#ifCond field.xsdDatatype.value "=="  "http://www.w3.org/2001/XMLSchema#string"}}{{value.value.value}}{{/ifCond}}{{#ifCond field.xsdDatatype.value "=="  "http://www.w3.org/2001/XMLSchema#dateTime"}}{{value.value.value}}{{/ifCond}}
+<div>
+  	{{#ifCond field.xsdDatatype.value "=="  "http://www.w3.org/2001/XMLSchema#string"}}
+  		{{value.value.value}}
+  	{{/ifCond}}
+  
+  	{{#ifCond field.xsdDatatype.value "=="  "http://www.w3.org/2001/XMLSchema#dateTime"}}
+  
+  		{{log dateTimeFormat value.value.value}}	
+  
+  		{{#ifCond (dateTimeFormat value.value.value "DD MM" "==" "01 01") "||" (dateTimeFormat value.value.value "DD MM" "==" "31 12")}}
+  			<div>{{dateTimeFormat value.value.value "YYYY"}}</div>
+  		{{/ifCond}}
+  
+  		{{#ifCond (dateTimeFormat value.value.value "DD MM" "!=" "01 01") "&&" (dateTimeFormat value.value.value "DD MM" "!=" "31 12")}} 
+  			<div>{{dateTimeFormat value.value.value "DD MMMM YYYY"}}</div>
+  		{{/ifCond}}
+  	{{/ifCond}}
+  
   {{#ifCond field.xsdDatatype.value "=="  "http://www.w3.org/2001/XMLSchema#anyURI"}}
   {{#if guess}}
   <semantic-link uri="{{value.value.value}}" guess-repository=true></semantic-link>

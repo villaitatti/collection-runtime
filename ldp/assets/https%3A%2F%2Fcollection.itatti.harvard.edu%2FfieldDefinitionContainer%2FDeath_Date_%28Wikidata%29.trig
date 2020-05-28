@@ -1,0 +1,36 @@
+
+<https://collection.itatti.harvard.edu/fieldDefinitionContainer/Death_Date_(Wikidata)/context> {
+  <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Death_Date_(Wikidata)>
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-38379696d32e479eb8d5b6fb03ff47d3-4xamuc .
+  
+  _:genid-38379696d32e479eb8d5b6fb03ff47d3-pgsbjh a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-38379696d32e479eb8d5b6fb03ff47d3-4xamuc a <http://spinrdf.org/sp#Query> .
+  
+  <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Death_Date_(Wikidata)>
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Death Date (Wikidata)";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-38379696d32e479eb8d5b6fb03ff47d3-pgsbjh .
+  
+  _:genid-38379696d32e479eb8d5b6fb03ff47d3-4xamuc <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-38379696d32e479eb8d5b6fb03ff47d3-pgsbjh <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?subject owl:sameAs ?wikidataURI . 
+  service <https://query.wikidata.org/sparql> {
+   ?wikidataURI <http://www.wikidata.org/prop/direct/P570> ?value .
+  }
+}""" .
+  
+  <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Death_Date_(Wikidata)>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-18T09:32:48.557Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Death_Date_(Wikidata)> .
+  
+  <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Death_Date_(Wikidata)>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

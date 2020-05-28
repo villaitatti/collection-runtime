@@ -1,0 +1,35 @@
+
+<https://collection.itatti.harvard.edu/Annotations.Container/870000e1-f2a2-46a1-afd5-bc0aeb29e110/context> {
+  <https://collection.itatti.harvard.edu/Annotations.Container/870000e1-f2a2-46a1-afd5-bc0aeb29e110>
+    a <http://www.researchspace.org/ontology/Annotation>, <http://www.w3.org/ns/oa#Annotation>;
+    <http://www.w3.org/ns/oa#hasTarget> <https://collection.itatti.harvard.edu/resource/yashiro/person/kenneth_clark>;
+    a <http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object>;
+    <http://www.ics.forth.gr/isl/CRMdig/L43_annotates> <https://collection.itatti.harvard.edu/resource/yashiro/person/kenneth_clark> .
+  
+  <https://collection.itatti.harvard.edu/Annotations.Container/870000e1-f2a2-46a1-afd5-bc0aeb29e110/event>
+    <http://www.ics.forth.gr/isl/CRMdig/L48_created_annotation> <https://collection.itatti.harvard.edu/Annotations.Container/870000e1-f2a2-46a1-afd5-bc0aeb29e110>;
+    <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.cidoc-crm.org/cidoc-crm/P4_has_time_span> <https://collection.itatti.harvard.edu/Annotations.Container/870000e1-f2a2-46a1-afd5-bc0aeb29e110/event/timespan> .
+  
+  <https://collection.itatti.harvard.edu/Annotations.Container/870000e1-f2a2-46a1-afd5-bc0aeb29e110/event/timespan>
+    a <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span>;
+    <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> "2020-05-17T19:16:47.687Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://www.cidoc-crm.org/cidoc-crm/P82a_end_of_the_end> "2020-05-17T19:16:47.687Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://collection.itatti.harvard.edu/Annotations.Container/870000e1-f2a2-46a1-afd5-bc0aeb29e110/body>
+    a <http://www.w3.org/ns/oa#TextualBody>;
+    <http://www.w3.org/ns/oa#text> "{\"id\":\"d5ce5de3-6fe1-43ed-ae9b-9891bc114abb\",\"cells\":[{\"id\":\"354fe9da-43a5-40e3-8981-c78616c422b9\",\"inline\":null,\"size\":12,\"content\":{\"plugin\":{\"name\":\"ory/editor/core/content/slate\",\"version\":\"0.0.1\"},\"state\":{\"serialized\":{\"nodes\":[{\"kind\":\"block\",\"type\":\"PARAGRAPH/PARAGRAPH\",\"nodes\":[{\"kind\":\"text\",\"text\":\"A quite important person in the Yashiro correspondence.\"}]}]}}}}]}";
+    <http://purl.org/dc/elements/1.1/format> "text/html" .
+  
+  <https://collection.itatti.harvard.edu/Annotations.Container/870000e1-f2a2-46a1-afd5-bc0aeb29e110>
+    <http://www.w3.org/ns/oa#hasBody> <https://collection.itatti.harvard.edu/Annotations.Container/870000e1-f2a2-46a1-afd5-bc0aeb29e110/body>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-17T19:16:47.688Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.researchspace.org/ontology/Annotations.Container> <http://www.w3.org/ns/ldp#contains>
+      <https://collection.itatti.harvard.edu/Annotations.Container/870000e1-f2a2-46a1-afd5-bc0aeb29e110> .
+  
+  <https://collection.itatti.harvard.edu/Annotations.Container/870000e1-f2a2-46a1-afd5-bc0aeb29e110>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

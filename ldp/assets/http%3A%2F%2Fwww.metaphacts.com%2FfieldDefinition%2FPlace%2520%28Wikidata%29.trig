@@ -1,0 +1,56 @@
+
+<http://www.metaphacts.com/fieldDefinition/Place%20(Wikidata)/context> {
+  <http://www.metaphacts.com/fieldDefinition/Place%20(Wikidata)> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-477f74b4e4ff4d38a943cf220c2761d8-u3k1h9 .
+  
+  _:genid-477f74b4e4ff4d38a943cf220c2761d8-u3k1h9 <http://spinrdf.org/sp#text> """SELECT $value WHERE {
+  $subject rdf:value $value .
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/Place%20(Wikidata)> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
+    <http://www.w3.org/2000/01/rdf-schema#comment> "City from Wikidata";
+    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-477f74b4e4ff4d38a943cf220c2761d8-8ayz4 .
+  
+  _:genid-477f74b4e4ff4d38a943cf220c2761d8-u3k1h9 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-477f74b4e4ff4d38a943cf220c2761d8-8ayz4 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Place%20(Wikidata)> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-477f74b4e4ff4d38a943cf220c2761d8-h8dr6b .
+  
+  _:genid-477f74b4e4ff4d38a943cf220c2761d8-8ayz4 <http://spinrdf.org/sp#text> """PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT distinct ?value ?label WHERE {
+  service <https://query.wikidata.org/sparql> {
+    ?value <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q515>.
+    ?value rdfs:label ?label.
+    FILTER REGEX(STR(?label), \"?token\", \"i\").
+    FILTER(LANG(?label) = \"en\")
+  }
+} limit 10""" .
+  
+  _:genid-477f74b4e4ff4d38a943cf220c2761d8-h8dr6b <http://spinrdf.org/sp#text> """INSERT { 
+  $subject rdf:value $value.
+  $value rdfs:label ?label
+} WHERE {
+  SERVICE <https://query.wikidata.org/sparql> {
+  	?value rdfs:label ?label;
+    FILTER(LANG(?label) = \"en\")
+  }
+}""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Place%20(Wikidata)> <http://www.metaphacts.com/ontology/fields#maxOccurs>
+      "1";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Place (Wikidata)"@en;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-26T09:16:36.161Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/Place%20(Wikidata)> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Place%20(Wikidata)> a <http://www.w3.org/ns/ldp#Resource> .
+}

@@ -1,0 +1,38 @@
+
+<https://collection.itatti.harvard.edu/fieldDefinitionContainer/Birth_Place_(Wikidata)/context> {
+  <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Birth_Place_(Wikidata)>
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-a402ea0df53a4bc4838e52ba63b7bf22-cdu3ei a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?subject owl:sameAs ?wikidataURI . 
+  service <https://query.wikidata.org/sparql> {
+   ?wikidataURI <http://www.wikidata.org/prop/direct/P19> ?birthplace .
+    ?birthplace rdfs:label ?value .
+FILTER(LANG(?value) = \"en\")    
+  }
+}
+""" .
+  
+  _:genid-a402ea0df53a4bc4838e52ba63b7bf22-04lhx9 a <http://spinrdf.org/sp#Query> .
+  
+  <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Birth_Place_(Wikidata)>
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-a402ea0df53a4bc4838e52ba63b7bf22-cdu3ei .
+  
+  _:genid-a402ea0df53a4bc4838e52ba63b7bf22-04lhx9 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Birth_Place_(Wikidata)>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Birth Place (Wikidata)";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-a402ea0df53a4bc4838e52ba63b7bf22-04lhx9;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-17T11:18:20.995Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Birth_Place_(Wikidata)> .
+  
+  <https://collection.itatti.harvard.edu/fieldDefinitionContainer/Birth_Place_(Wikidata)>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

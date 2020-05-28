@@ -1,0 +1,35 @@
+
+<http://www.researchspace.org/instances/fields/Type/context> {
+  <http://www.researchspace.org/instances/fields/Type> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-fad156e670dd4581957cd8fb872b195c-u12wd;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-fad156e670dd4581957cd8fb872b195c-8k6vm5 .
+  
+  _:genid-fad156e670dd4581957cd8fb872b195c-aufylc <http://spinrdf.org/sp#text> "SELECT $value WHERE { $subject rdf:type $value }" .
+  
+  <http://www.researchspace.org/instances/fields/Type> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Type"@en .
+  
+  _:genid-fad156e670dd4581957cd8fb872b195c-u12wd <http://spinrdf.org/sp#text> "DELETE { $subject rdf:type $value } WHERE {}" .
+  
+  _:genid-fad156e670dd4581957cd8fb872b195c-aufylc a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Type> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-fad156e670dd4581957cd8fb872b195c-8k6vm5 <http://spinrdf.org/sp#text> "INSERT { $subject rdf:type $value } WHERE {}";
+    a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-fad156e670dd4581957cd8fb872b195c-u12wd a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Type> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-fad156e670dd4581957cd8fb872b195c-aufylc;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-18T08:00:36.962Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Type> .
+  
+  <http://www.researchspace.org/instances/fields/Type> a <http://www.w3.org/ns/ldp#Resource> .
+}
